@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>金稻商城</title>
+    <meta name="author" content="高磊"/>
+    <meta name="keywords" content="金稻商城"/>
+    <meta name="description" content="金稻商城是一个手机充值或购物平台。其独特之处在于，成为VIP会员后你享有两方面收益 1、VIP会员手机充值、购物会享受8.8折优惠2、你可以推荐别人注册，别人成为VIP、充话费或购物的消费你都会有提成，可以使你的收入不断，赶快体验一下吧"/>
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
+    <style type="text/css">
+    body, div, ul, li, a, img {
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-bg{
+     background: url('img/footer_bg_640.png') no-repeat;
+     /*background: #0e0e0e;*/
+     background-size: cover;
+     width: 100%;
+     height: 160px;
+     position: relative;
+     text-align: center;
+     top: 160px;
+ }
+
+ a:link { 
+    color:#ffffff; 
+    text-decoration:underline; 
+} 
+a:hover { 
+    color:#caa336; 
+    text-decoration:none; 
+} 
+
+</style>
+<!--JS代码网顶部CSS-->
+<link rel="shortcut icon" href="img/logo.png"/>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+
+<link rel="stylesheet" type="text/css" href="css/unslider.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--JS代码网顶部CSS-->
+</head>
+<body  bgcolor="#fbf4fe">
+    <div class="layout">
+     <!--轮播图-->
+     <div class="banner" id="b01">
+        <div>
+            <ul >
+                <li><a ><img src="img/banner1_640.png" height="300"></a></li>
+                <li><a ><img src="img/banner2_640.png" height="300"></a></li>
+                <li><a ><img src="img/banner3_640.png" height="300"></a></li>
+                <li><a ><img src="img/banner4_640.png" height="300"></a></li>
+                <li><a ><img src="img/banner5_640.png" height="300"></a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+
+        function slider(s) {
+            this.init.apply(this, arguments)
+        }
+        slider.prototype = {
+            init: function (s) {
+                this.o = this.getByClass(s)[0];
+                this.l = this.getByClass('slider_pic', this.o)[0].getElementsByTagName('li');
+                this.b = this.getByClass('slider_btn', this.o)[0];
+                this.bSpan = this.b.getElementsByTagName('span');
+                this.len = this.l.length;
+                this.iNum = 1;
+            this.status();//初始化状态
+            this.autoPlay();//自动播放
+            this.clickPlay();//点击按钮播放
+            this.suspensionPause();//鼠标悬浮暂停
+        },
+        clickPlay: function () {
+            var This = this;
+            for (var i = 0; i < this.len; i++) {
+                this.bSpan[i].index = i;
+                this.bSpan[i].onclick = function () {
+                    clearInterval(This.timer);
+                    var index = this.index;
+                    This.iNum = (index + 1) == This.len ? 0 : (index + 1);
+                    var o = This.l[index];
+                    This.setLayout(this, o);
+                    This.autoPlay();
+                }
+            }
+        },
+        suspensionPause: function () {
+            var This = this;
+            for (var i = 0; i < this.len; i++) {
+                this.l[i].onmouseover = function () {
+                    clearInterval(This.timer);
+                }
+                this.l[i].onmouseout = function () {
+                    This.autoPlay();
+                }
+            }
+        },
+        setLayout: function (o1, o2) {
+            for (var j = 0; j < this.len; j++) {
+                if (this.bSpan[j] != o1) {
+                    this.bSpan[j].className = '';
+                    this.l[j].style.zIndex = j;
+                }
+            }
+            o2.style.zIndex = this.len;
+            o2.style.left = '600px';
+            this.doMove(o2, 0);
+            o1.className = 'cur';
+        },
+        status: function () {
+            for (var i = this.len; i--; i > 0) {
+                this.l[i].style.zIndex = i;
+                this.bSpan[i].className = '';
+            }
+            this.l[0].style.zIndex = this.len;
+            this.bSpan[0].className = 'cur';
+            this.b.style.zIndex = (this.len + 1);
+        },
+        autoPlay: function () {
+            this.timer = null;
+            var This = this;
+            this.timer = setInterval(function () {
+                This.setLayout(This.bSpan[This.iNum], This.l[This.iNum])
+                This.iNum++;
+                if (This.iNum == This.len) {
+                    This.iNum = 0;
+                }
+            }, 4500)
+        },
+        getByClass: function (s, p) {
+            var reg = new RegExp('(\\b)' + s + '(\\b)');
+            var aResult = [];
+            var aElement = (p || document).getElementsByTagName('*');
+            for (var i = 0; i < aElement.length; i++) {
+                reg.test(aElement[i].className) && aResult.push(aElement[i])
+            }
+            return aResult;
+        },
+        doMove: function (o, t) {
+            clearInterval(o.timer);
+            o.timer = setInterval(function () {
+                var iS = (t - o.offsetLeft) / 8;
+                iS = iS > 0 ? Math.ceil(iS) : Math.floor(iS);
+
+                if (o.offsetLeft == t) {
+                    clearInterval(o.timer);
+                }
+                else {
+                    o.style.left = o.offsetLeft + iS + "px";
+                }
+
+            }, 30)
+        }
+
+    }
+    var slide = new slider('slider');
+</script>
+
+
+<div class="txt_content_outer">
+    <br/>
+    <div class="txt_title  gradual">公司介绍：</div>
+
+    <div class="txt_content">
+    河南拓荒农业科技开发有限公司，位于伏牛山盆地，拥揽伏牛、桐柏两大山脉，淮河发源地，中华第一古长城横跨其中，环境优美，自然资源丰富，四季分明，温湿适宜。现响应国家号召，进行电商扶贫开发，顺势成立集农产品种植，加工，销售，电子商务，农业相关合作社，农家乐旅游经营，等相关领域多元化经营的大型综合性企业，立足中原，辐射全国，旨在进行健康农业，绿色农业，均衡农业，致富农业，带动农民增收，增产，增质，增富，解决农村经济结构，增加农民收入，同时解决城市人口健康饮食，绿色饮食，为目的。现公司拥有绿色种植基地万余亩，养殖基地三个，非物质文化遗产项目一个，自有商标数个，农产品加工厂一个，网上商城一个，并在不断进行发现和扩大，争取早日带领群众共同致富，建设美好家园！</div><br/>
+    <div class="txt_title  gradual">金稻商城：</div>
+
+    <div class="txt_content">金稻商城是拓荒农业科技开发有限公司全力打造的一款App，商城是以销售生态，绿色，有机农产品+手机充值为主要业务的手机服务软件，用户可以在软件内实现手机充值业务，能够通过软件内提供的活动享受超多的优惠，同时还有超多优惠商家入住，为你带去美好的购物体验！金稻商城app以话费充值为突破口，话费充值88折，一次性到账，具有极大的竞争力，通过优惠充值引流，扩大会员量。<br/>
+    App下载地址： https://www.pgyer.com/ykPl<br/><br/>
+        <!-- App特色功能：<br/>
+        1、不用进货照样能做生意<br/>
+        2、不用发货照样有收入<br/>
+        3、推广一个VIP会员奖励奖金10元<br/>
+        4、目前最好的生意不用交铺租。<br/>
+        5、公平合理、公开合法、透明化。<br/>
+        6、零投资，无需団货，无需售后，无需管理<br/>
+        7、管道收益，团队充值有奖金，充值100元，奖励您1.5元<br/>
+        8、只需预存49元成为VIP会员就拥有24小时营业的手机商城，跟免费店铺。<br/>
+        9、预存话费49元成为金稻商城VIP会员，享受话费充值88折优惠，自用省钱，分享赚钱 。<br/>
+        10、移动，联通，电信手机充值享8.8折，充值50元只需支付44元，充值100元只需支付88元 ，跟在柜台营业厅，微信，支付宝平台充值话费一样秒到账，有短信通知。<br/><br/>
+        软件优势：<br/>
+        1、自由自在，开心快乐。<br/>
+        2、好吃好玩，玩玩微信就有收入。<br/>
+        3、不懂会有人教，互帮互助。<br/>
+        4、24小时的营业平台，连睡觉都有收入<br/>
+        5、建行财富管道，收入源源不断。<br/>
+        6、没有繁琐的资金分配流程，体现安全便捷。<br/>
+        7、中国庞大的15亿人口，不怕没客户。<br/>
+        8、零风险，不伤人脉，人人平等，发展空间极大。<br/>
+        9、发展简单，推广容易，团队运作，不是单打独斗。<br/>
+        10、简单易操作，推广二维码注册下载APP成为会员<br/> -->
+    </div>
+</div>
+<div class="download-bg">
+   <img src='img/download_code.png'/>
+   <p class="txt_scan">扫码下载APP</p>
+</div>
+<div class="footer-bg">
+
+    <div class="footer_txt_outer">
+        <div class="footer-text-box">
+            <p class="footer_txt">Copyright  2013-2018 河南拓荒农业科技开发有限公司</p>
+            <p class="footer_txt">地址：河南省南阳市方城县物流街10号</p>
+            <p class="footer_txt">客服电话：4007882109 | QQ：2312965260 </p>
+            <p class="footer_txt">邮箱：jindaosc@163.com</p>
+            <!-- <a href="http://www.miitbeian.gov.cn/" target="_blank"> <p class="footer_txt">豫ICP备18040273号-1 </p></a> -->
+            <p class="footer_txt">
+                <a class="footer_txt" href="http://www.miitbeian.gov.cn/" target='_blank'>豫ICP备18040273号</a></p>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.event.move.js"></script>
+<script type="text/javascript" src="js/jquery.event.swipe.js"></script>
+<script type="text/javascript" src="js/unslider.js"></script>
+<script>
+    $(function() {
+        $('.banner').unslider({
+            speed : 500,
+            delay : 3000,
+            nav : true,//是否启动导航图标
+            dots: true,//是否出先圆点点
+            arrows : false,
+            autoplay : true //自动轮播           
+        });
+    })
+</script>
+
+</body>
+</html>
