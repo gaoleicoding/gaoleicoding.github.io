@@ -2,8 +2,8 @@
 
 .layout{
 	width: 100%;
-	max-width: 640px;
-	min-width: 320px;
+	max-width: 1080px;
+	min-width: 640px;
 	margin: 0 auto;
 	background: #F3F3F3;
 }
@@ -59,12 +59,11 @@
 }
 
 .download-bg{
-	background-size: cover;
-	width: 100%;
-	height: 200px;
+	/*background-size: cover;*/
+	width: 720px;
 	position: relative;
 	top: 100px;
-	bottom: 240px;
+	bottom: 40px;
 	text-align: center;
 }
 
