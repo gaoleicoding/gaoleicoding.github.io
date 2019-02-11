@@ -5,7 +5,7 @@
 	max-width: 1080px;
 	min-width: 640px;
 	margin: 0 auto;
-	background: #F3F3F3;
+	background: #Fff;
 }
 .banner ul li a img{
 	width: 100%;
@@ -30,6 +30,7 @@
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+
 .shadow1{           
 	text-shadow: 5px 5px 5px gray;
 }
@@ -37,11 +38,11 @@
 
 .txt_content_outer {
 
-	width: 90%;
+	width: 95%;
 	margin:0 auto;
 }
 .txt_title{
-	color: #2a58ac;
+	color: #1652a0;
 	font-size: 24px;
 	font-weight:bold;
 	font-family:"Times New Roman",Georgia,Serif;
@@ -49,6 +50,18 @@
 .txt_content{
 	color: #333333;
 	font-size: 16px;
+}
+.txt_content2{
+	color: #1b1b1b;
+	font-size: 26px;
+	position: relative;
+	text-align: center;
+	margin: 50px;
+}
+.content-box{
+	position: relative;
+    width: 100%;
+	text-align: center;
 }
 .txt_scan{
 	color: #363636;
@@ -60,9 +73,8 @@
 
 .download-bg{
 	/*background-size: cover;*/
-	width: 720px;
+	width: 100%;
 	position: relative;
-	top: 100px;
 	bottom: 40px;
 	text-align: center;
 }
