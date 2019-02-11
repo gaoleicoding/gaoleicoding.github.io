@@ -47,8 +47,18 @@
 	font-weight:bold;
 	font-family:"Times New Roman",Georgia,Serif;
 }
+.project_txt_title{
+	color: #4cbf9c;
+	font-size: 24px;
+	font-weight:bold;
+	font-family:"Times New Roman",Georgia,Serif;
+}
 .txt_content{
 	color: #333333;
+	font-size: 16px;
+}
+.txt_content_title{
+	color: #1b1b1b;
 	font-size: 16px;
 }
 .txt_content2{
@@ -57,6 +67,18 @@
 	position: relative;
 	text-align: center;
 	margin: 50px;
+}
+.project_img_outer{
+	white-space:nowrap;/*内容横向排列不换行*/ 
+overflow-x:auto;　　overflow-y:hidden;/*隐藏溢出部分。横向滚动条自动出现，纵向滚动条隐藏*/ 
+width: 95%;
+	/*margin:0 auto;*/
+	margin: 20px;
+}
+.project_img_inner{
+	width: 95%;
+	position: relative;
+text-align: center;
 }
 .content-box{
 	position: relative;
