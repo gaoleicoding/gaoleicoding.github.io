@@ -4,8 +4,8 @@
 	width: 100%;
 	max-width: 1080px;
 	min-width: 640px;
-	max-width: 640px;
-	min-width: 320px;
+	/*max-width: 640px;
+	min-width: 320px;*/
 	margin: 0 auto;
 	background: #Fff;
 }
