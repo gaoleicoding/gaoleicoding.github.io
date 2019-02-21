@@ -2,6 +2,8 @@
 
 .layout{
 	width: 100%;
+	max-width: 1080px;
+	min-width: 640px;
 	max-width: 640px;
 	min-width: 320px;
 	margin: 0 auto;
@@ -73,7 +75,7 @@
 overflow-x:auto;　　overflow-y:hidden;/*隐藏溢出部分。横向滚动条自动出现，纵向滚动条隐藏*/ 
 width: 95%;
 	/*margin:0 auto;*/
-	margin: 20px;
+	/*margin: 20px;*/
 }
 .project_img_inner{
 	width: 95%;
