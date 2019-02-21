@@ -8,6 +8,7 @@
 	min-width: 320px;*/
 	margin: 0 auto;
 	background: #Fff;
+	padding: 1%;
 }
 .banner ul li a img{
 	width: 100%;
@@ -40,7 +41,6 @@
 
 .txt_content_outer {
 
-	width: 95%;
 	margin:0 auto;
 }
 .txt_title{
@@ -48,6 +48,18 @@
 	font-size: 24px;
 	font-weight:bold;
 	font-family:"Times New Roman",Georgia,Serif;
+}
+.txt_sub_title{
+	color: #1b1b1b;
+	font-size: 16px;
+	margin: 5px;
+}
+.txt_content_title{
+	color: #1b1b1b;
+	font-size: 32px;
+	position: relative;
+	text-align: center;
+	margin: 50px;
 }
 .project_txt_title{
 	color: #4cbf9c;
@@ -58,18 +70,9 @@
 .txt_content{
 	color: #333333;
 	font-size: 16px;
+	margin: 5px;
 }
-.txt_content_title{
-	color: #1b1b1b;
-	font-size: 16px;
-}
-.txt_content2{
-	color: #1b1b1b;
-	font-size: 26px;
-	position: relative;
-	text-align: center;
-	margin: 60px;
-}
+
 .project_img_outer{
 	white-space:nowrap;/*内容横向排列不换行*/ 
 overflow-x:auto;　　overflow-y:hidden;/*隐藏溢出部分。横向滚动条自动出现，纵向滚动条隐藏*/ 
