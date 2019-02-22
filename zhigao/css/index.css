@@ -5,12 +5,12 @@
 } 
 
 .hover_link_style a:hover{
-	color:#caa336; 
+	color:#e16317; 
     text-decoration:none;  
 } 
 .layout{
 	width: 100%;
-	max-width: 1080px;
+	max-width: 960px;
 	min-width: 640px;
 	max-height: 100%;
 	min-height: 100%;
