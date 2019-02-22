@@ -82,7 +82,8 @@
 	font-size: 30px;
 	position: relative;
 	text-align: center;
-	margin: 10px;
+	margin-top: 50px
+	margin-bottom: 5px;
 }
 .txt_content_sub_title{
 	color: #a6a8ad;
