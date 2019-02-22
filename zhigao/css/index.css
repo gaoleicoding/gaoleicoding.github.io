@@ -1,9 +1,19 @@
 
+.hover_link_style a:link{
+	color:#000000; 
+    text-decoration:underline; 
+} 
 
+.hover_link_style a:hover{
+	color:#caa336; 
+    text-decoration:none;  
+} 
 .layout{
 	width: 100%;
 	max-width: 1080px;
 	min-width: 640px;
+	max-height: 100%;
+	min-height: 100%;
 	/*max-width: 640px;
 	min-width: 320px;*/
 	margin: 0 auto;
@@ -49,17 +59,36 @@
 	font-weight:bold;
 	font-family:"Times New Roman",Georgia,Serif;
 }
-.txt_sub_title{
+.txt_content{
 	color: #1b1b1b;
 	font-size: 16px;
-	margin: 5px;
+	margin-bottom: : 8px;
+}
+.txt_content2{
+	color: #e16317;
+	font-size: 16px;
+	margin-bottom: : 20px;
+	font-weight:bold;
 }
 .txt_content_title{
 	color: #1b1b1b;
-	font-size: 32px;
+	font-size: 30px;
 	position: relative;
 	text-align: center;
 	margin: 50px;
+}
+.txt_content_title2{
+	color: #1b1b1b;
+	font-size: 30px;
+	position: relative;
+	text-align: center;
+	margin: 10px;
+}
+.txt_content_sub_title{
+	color: #a6a8ad;
+	font-size:16px;
+	position: relative;
+	text-align: center;
 }
 .project_txt_title{
 	color: #4cbf9c;
@@ -67,16 +96,11 @@
 	font-weight:bold;
 	font-family:"Times New Roman",Georgia,Serif;
 }
-.txt_content{
-	color: #333333;
-	font-size: 16px;
-	margin: 5px;
-}
 
 .project_img_outer{
 	white-space:nowrap;/*内容横向排列不换行*/ 
 overflow-x:auto;　　overflow-y:hidden;/*隐藏溢出部分。横向滚动条自动出现，纵向滚动条隐藏*/ 
-width: 95%;
+text-align: center;
 	/*margin:0 auto;*/
 	/*margin: 20px;*/
 }
