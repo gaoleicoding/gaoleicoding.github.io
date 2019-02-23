@@ -1,12 +1,12 @@
 
 .hover_link_style a:link{
 	color:#000000; 
-    text-decoration:underline; 
+	text-decoration:underline; 
 } 
 
 .hover_link_style a:hover{
 	color:#e16317; 
-    text-decoration:none;  
+	text-decoration:none;  
 } 
 .layout{
 	width: 100%;
@@ -18,7 +18,7 @@
 	min-width: 320px;*/
 	margin: 0 auto;
 	background: #Fff;
-	padding: 1%;
+	padding: 15px;
 }
 .banner ul li a img{
 	width: 100%;
@@ -36,7 +36,15 @@
 	bottom: 2%;
 }
 
-
+ .sign-up-bg{
+       background: url('img/sign_up.png') no-repeat;
+       /*background: #0e0e0e;*/
+       background-size: cover;
+       width: 100%;
+       height: 120px;
+       position: relative;
+       text-align: center;
+   }
 
 .gradual{       
 	background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(yellow), to(green));
@@ -53,6 +61,7 @@
 
 	margin:0 auto;
 }
+
 .txt_title{
 	color: #1652a0;
 	font-size: 24px;
@@ -96,22 +105,30 @@
 	font-weight:bold;
 	font-family:"Times New Roman",Georgia,Serif;
 }
-
+.img_outer{
+	white-space:nowrap;/*内容横向排列不换行*/ 
+	overflow-x:auto;　　overflow-y:hidden;/*隐藏溢出部分。横向滚动条自动出现，纵向滚动条隐藏*/ 
+	text-align: center;
+	
+}
 .project_img_outer{
 	white-space:nowrap;/*内容横向排列不换行*/ 
-overflow-x:auto;　　overflow-y:hidden;/*隐藏溢出部分。横向滚动条自动出现，纵向滚动条隐藏*/ 
-text-align: center;
-	/*margin:0 auto;*/
-	/*margin: 20px;*/
+	overflow-x:auto;　　overflow-y:hidden;/*隐藏溢出部分。横向滚动条自动出现，纵向滚动条隐藏*/ 
+	text-align: center;
+}
+.project-content-bg {
+	background: #f6f6f6;
+	padding-left:20px;
+	padding-right:20px;
 }
 .project_img_inner{
 	width: 95%;
 	position: relative;
-text-align: center;
+	text-align: center;
 }
 .content-box{
 	position: relative;
-    width: 100%;
+	width: 100%;
 	text-align: center;
 }
 .txt_scan{
@@ -146,10 +163,18 @@ text-align: center;
 	/*display: inline-block; */
 	
 }
-  .sign-up-bg{
-     width: 100%;
-     margin-top: 30px;
- }
+.sign_up_outer{
+	white-space:nowrap;/*内容横向排列不换行*/ 
+	overflow-x:auto;　　overflow-y:hidden;/*隐藏溢出部分。横向滚动条自动出现，纵向滚动条隐藏*/ 
+	text-align: center;
+	margin-top: 50px;
+}
+.sign-up-bg{
+	background-size: cover;
+       width: 100%;
+       position: relative;
+       text-align: center;
+}
 .footer_txt {
 	color: #FFFFEF;
 	font-size: 14px;
