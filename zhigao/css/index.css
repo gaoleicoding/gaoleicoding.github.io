@@ -175,7 +175,7 @@
 	/*white-space:nowrap;
 	overflow-x:auto;　　overflow-y:hidden;隐藏溢出部分。横向滚动条自动出现，纵向滚动条隐藏 
 	text-align: center;*/
-	margin-top: 66px;
+	margin-top: 90px;
 }
 .sign-up-bg{
 	background-size: cover;
@@ -243,6 +243,18 @@
 	font-size: 14px;
 	line-height: 25px;
 	margin: 0px auto 0px;
+}
+.salary_img_container {
+	justify-content: center;
+	display: block;
+	text-align: center;
+}
+.sub_page_img {
+	justify-content: center;
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 .download_url_txt {
 	color: #2a58ac;
