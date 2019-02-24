@@ -1,7 +1,8 @@
 
 .hover_link_style a:link{
 	color:#000000; 
-	text-decoration:underline; 
+	/*text-decoration:underline; */
+	text-decoration:none;
 } 
 
 .hover_link_style a:hover{
@@ -19,6 +20,7 @@
 	margin: 0 auto;
 	background: #Fff;
 	padding: 15px;
+	display: block;
 }
 .banner ul li a img{
 	width: 100%;
@@ -36,15 +38,15 @@
 	bottom: 2%;
 }
 
- .sign-up-bg{
-       background: url('img/sign_up.png') no-repeat;
-       /*background: #0e0e0e;*/
-       background-size: cover;
-       width: 100%;
-       height: 120px;
-       position: relative;
-       text-align: center;
-   }
+.sign-up-bg{
+	background: url('img/sign_up.png') no-repeat;
+	/*background: #0e0e0e;*/
+	background-size: cover;
+	width: 100%;
+	height: 120px;
+	position: relative;
+	text-align: center;
+}
 
 .gradual{       
 	background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(yellow), to(green));
@@ -111,6 +113,12 @@
 	text-align: center;
 	
 }
+.project_img_size{
+	width: : 60px;
+}
+.project_img{
+	width: : 100%;
+}
 .project_img_outer{
 	white-space:nowrap;/*内容横向排列不换行*/ 
 	overflow-x:auto;　　overflow-y:hidden;/*隐藏溢出部分。横向滚动条自动出现，纵向滚动条隐藏*/ 
@@ -164,16 +172,71 @@
 	
 }
 .sign_up_outer{
-	white-space:nowrap;/*内容横向排列不换行*/ 
-	overflow-x:auto;　　overflow-y:hidden;/*隐藏溢出部分。横向滚动条自动出现，纵向滚动条隐藏*/ 
-	text-align: center;
-	margin-top: 50px;
+	/*white-space:nowrap;
+	overflow-x:auto;　　overflow-y:hidden;隐藏溢出部分。横向滚动条自动出现，纵向滚动条隐藏 
+	text-align: center;*/
+	margin-top: 66px;
 }
 .sign-up-bg{
 	background-size: cover;
-       width: 100%;
-       position: relative;
-       text-align: center;
+	width: 100%;
+	position: relative;
+	text-align: center;
+}
+
+.layout_news{
+	float: left;
+	width: 25%;
+	box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	padding: 0 14px 2px 14px;
+	margin-top: 20px;
+}
+.news_container_outer {
+	display: flex;
+	align-items: center;
+	
+}
+.news_container {
+	display: flex;
+	align-items: center;
+	width: 33%;
+	padding: 20px;
+}
+.news_time_container {
+	display: flex;
+	align-items: center;
+	padding-left: 15px;
+}
+.news_txt_title {
+
+	padding-left: 15px;
+	color: #1b1b1b;
+	font-size: 15px;
+}
+.news_txt_content {
+
+	padding-left: 15px;
+	padding-top: 6px;
+	padding-bottom:6px;
+	color: #666666;
+	font-size: 13px;
+}
+.news_txt_time {
+
+	color: #b4b4b4;
+	font-size: 12px;
+}
+.img_news{
+	width: 100px;
+	height: 100px;
+	position: relative;
+	text-align: center;
+}
+.txt_news{
+	display: flex;
+	color: #1b1b1b;
+	font-size: 16px;
 }
 .footer_txt {
 	color: #FFFFEF;
